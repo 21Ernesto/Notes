@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form (ngSubmit)="Ingresar()">
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" formControlName="email" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" formControlName="password" required></ion-input>
+    </ion-item>
+    <ion-row id="botonSesion">
+      <ion-col>
+        <ion-button id="Login" expand="block" type="submit">Iniciar sesión</ion-button>
+        <a [routerLink]="['/regitro']" class="small-text">Registrarse</a>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
